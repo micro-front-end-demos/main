@@ -6,6 +6,13 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  routes: [
+    {
+      path: '/',
+      component: '@/pages/index',
+    },
+    { path: '/micro-app-a', microApp: 'micro-app-a' },  // 子应用路由
+  ],
   history: {
     type: 'browser',
   },
